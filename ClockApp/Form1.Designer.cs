@@ -63,8 +63,8 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clock";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing_1);
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.ParentChanged += new System.EventHandler(this.Form1_ParentChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 
