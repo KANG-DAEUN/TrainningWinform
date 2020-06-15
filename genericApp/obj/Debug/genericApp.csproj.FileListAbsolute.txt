@@ -1,0 +1,7 @@
+C:\SRC\TrainningWinform\genericApp\bin\Debug\genericApp.exe.config
+C:\SRC\TrainningWinform\genericApp\bin\Debug\genericApp.exe
+C:\SRC\TrainningWinform\genericApp\bin\Debug\genericApp.pdb
+C:\SRC\TrainningWinform\genericApp\obj\Debug\genericApp.csprojAssemblyReference.cache
+C:\SRC\TrainningWinform\genericApp\obj\Debug\genericApp.csproj.CoreCompileInputs.cache
+C:\SRC\TrainningWinform\genericApp\obj\Debug\genericApp.exe
+C:\SRC\TrainningWinform\genericApp\obj\Debug\genericApp.pdb
