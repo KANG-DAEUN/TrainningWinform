@@ -1,0 +1,10 @@
+C:\SRC\TrainningWinform\ClockApp\bin\Debug\ClockApp.exe.config
+C:\SRC\TrainningWinform\ClockApp\bin\Debug\ClockApp.exe
+C:\SRC\TrainningWinform\ClockApp\bin\Debug\ClockApp.pdb
+C:\SRC\TrainningWinform\ClockApp\obj\Debug\ClockApp.csprojAssemblyReference.cache
+C:\SRC\TrainningWinform\ClockApp\obj\Debug\ClockApp.Form1.resources
+C:\SRC\TrainningWinform\ClockApp\obj\Debug\ClockApp.Properties.Resources.resources
+C:\SRC\TrainningWinform\ClockApp\obj\Debug\ClockApp.csproj.GenerateResource.cache
+C:\SRC\TrainningWinform\ClockApp\obj\Debug\ClockApp.csproj.CoreCompileInputs.cache
+C:\SRC\TrainningWinform\ClockApp\obj\Debug\ClockApp.exe
+C:\SRC\TrainningWinform\ClockApp\obj\Debug\ClockApp.pdb
