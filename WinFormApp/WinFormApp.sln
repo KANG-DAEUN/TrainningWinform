@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormApp", "WinFormApp.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockApp", "..\ClockApp\ClockApp.csproj", "{32A52123-1631-4EFB-8AF2-80250747CED7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonTestApp", "..\ButtonTestApp\ButtonTestApp.csproj", "{6932483A-8670-4124-9C56-8128FDA0CF53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckBoxApp", "..\CheckBoxApp\CheckBoxApp.csproj", "{C5FB0C51-28D5-4F07-B5E6-7C9ADC269204}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioButtonTestApp", "..\RadioButtonTestApp\RadioButtonTestApp.csproj", "{1DD35C60-3E9A-49F2-B8EF-E45FF1BBFAB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +27,18 @@ Global
 		{32A52123-1631-4EFB-8AF2-80250747CED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32A52123-1631-4EFB-8AF2-80250747CED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32A52123-1631-4EFB-8AF2-80250747CED7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6932483A-8670-4124-9C56-8128FDA0CF53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6932483A-8670-4124-9C56-8128FDA0CF53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6932483A-8670-4124-9C56-8128FDA0CF53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6932483A-8670-4124-9C56-8128FDA0CF53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5FB0C51-28D5-4F07-B5E6-7C9ADC269204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5FB0C51-28D5-4F07-B5E6-7C9ADC269204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5FB0C51-28D5-4F07-B5E6-7C9ADC269204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5FB0C51-28D5-4F07-B5E6-7C9ADC269204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DD35C60-3E9A-49F2-B8EF-E45FF1BBFAB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DD35C60-3E9A-49F2-B8EF-E45FF1BBFAB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DD35C60-3E9A-49F2-B8EF-E45FF1BBFAB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DD35C60-3E9A-49F2-B8EF-E45FF1BBFAB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,10 @@
+C:\SRC\TrainningWinform\CheckBoxApp\bin\Debug\CheckBoxApp.exe.config
+C:\SRC\TrainningWinform\CheckBoxApp\bin\Debug\CheckBoxApp.exe
+C:\SRC\TrainningWinform\CheckBoxApp\bin\Debug\CheckBoxApp.pdb
+C:\SRC\TrainningWinform\CheckBoxApp\obj\Debug\CheckBoxApp.csprojAssemblyReference.cache
+C:\SRC\TrainningWinform\CheckBoxApp\obj\Debug\CheckBoxApp.Form1.resources
+C:\SRC\TrainningWinform\CheckBoxApp\obj\Debug\CheckBoxApp.Properties.Resources.resources
+C:\SRC\TrainningWinform\CheckBoxApp\obj\Debug\CheckBoxApp.csproj.GenerateResource.cache
+C:\SRC\TrainningWinform\CheckBoxApp\obj\Debug\CheckBoxApp.csproj.CoreCompileInputs.cache
+C:\SRC\TrainningWinform\CheckBoxApp\obj\Debug\CheckBoxApp.exe
+C:\SRC\TrainningWinform\CheckBoxApp\obj\Debug\CheckBoxApp.pdb
