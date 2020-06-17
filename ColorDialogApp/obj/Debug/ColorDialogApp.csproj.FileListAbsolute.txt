@@ -1,0 +1,9 @@
+C:\SRC\TrainningWinform\ColorDialogApp\obj\Debug\ColorDialogApp.Form1.resources
+C:\SRC\TrainningWinform\ColorDialogApp\obj\Debug\ColorDialogApp.Properties.Resources.resources
+C:\SRC\TrainningWinform\ColorDialogApp\obj\Debug\ColorDialogApp.csproj.GenerateResource.cache
+C:\SRC\TrainningWinform\ColorDialogApp\obj\Debug\ColorDialogApp.csproj.CoreCompileInputs.cache
+C:\SRC\TrainningWinform\ColorDialogApp\bin\Debug\ColorDialogApp.exe.config
+C:\SRC\TrainningWinform\ColorDialogApp\bin\Debug\ColorDialogApp.exe
+C:\SRC\TrainningWinform\ColorDialogApp\bin\Debug\ColorDialogApp.pdb
+C:\SRC\TrainningWinform\ColorDialogApp\obj\Debug\ColorDialogApp.exe
+C:\SRC\TrainningWinform\ColorDialogApp\obj\Debug\ColorDialogApp.pdb

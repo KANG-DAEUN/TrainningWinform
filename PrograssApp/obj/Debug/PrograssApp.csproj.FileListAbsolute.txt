@@ -1,0 +1,10 @@
+C:\SRC\TrainningWinform\PrograssApp\bin\Debug\PrograssApp.exe.config
+C:\SRC\TrainningWinform\PrograssApp\bin\Debug\PrograssApp.exe
+C:\SRC\TrainningWinform\PrograssApp\bin\Debug\PrograssApp.pdb
+C:\SRC\TrainningWinform\PrograssApp\obj\Debug\PrograssApp.csprojAssemblyReference.cache
+C:\SRC\TrainningWinform\PrograssApp\obj\Debug\PrograssApp.Form1.resources
+C:\SRC\TrainningWinform\PrograssApp\obj\Debug\PrograssApp.Properties.Resources.resources
+C:\SRC\TrainningWinform\PrograssApp\obj\Debug\PrograssApp.csproj.GenerateResource.cache
+C:\SRC\TrainningWinform\PrograssApp\obj\Debug\PrograssApp.csproj.CoreCompileInputs.cache
+C:\SRC\TrainningWinform\PrograssApp\obj\Debug\PrograssApp.exe
+C:\SRC\TrainningWinform\PrograssApp\obj\Debug\PrograssApp.pdb
