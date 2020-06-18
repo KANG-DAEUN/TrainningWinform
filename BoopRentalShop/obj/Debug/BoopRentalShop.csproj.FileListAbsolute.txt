@@ -1,0 +1,15 @@
+C:\SRC\TrainningWinform\BoopRentalShop\bin\Debug\BoopRentalShop.exe.config
+C:\SRC\TrainningWinform\BoopRentalShop\bin\Debug\BoopRentalShop.exe
+C:\SRC\TrainningWinform\BoopRentalShop\bin\Debug\BoopRentalShop.pdb
+C:\SRC\TrainningWinform\BoopRentalShop\bin\Debug\MetroFramework.Design.dll
+C:\SRC\TrainningWinform\BoopRentalShop\bin\Debug\MetroFramework.dll
+C:\SRC\TrainningWinform\BoopRentalShop\bin\Debug\MetroFramework.Fonts.dll
+C:\SRC\TrainningWinform\BoopRentalShop\obj\Debug\BoopRentalShop.csprojAssemblyReference.cache
+C:\SRC\TrainningWinform\BoopRentalShop\obj\Debug\BoopRentalShop.LoginForm.resources
+C:\SRC\TrainningWinform\BoopRentalShop\obj\Debug\BoopRentalShop.MainForm.resources
+C:\SRC\TrainningWinform\BoopRentalShop\obj\Debug\BoopRentalShop.Properties.Resources.resources
+C:\SRC\TrainningWinform\BoopRentalShop\obj\Debug\BoopRentalShop.csproj.GenerateResource.cache
+C:\SRC\TrainningWinform\BoopRentalShop\obj\Debug\BoopRentalShop.csproj.CoreCompileInputs.cache
+C:\SRC\TrainningWinform\BoopRentalShop\obj\Debug\BoopRentalShop.csproj.CopyComplete
+C:\SRC\TrainningWinform\BoopRentalShop\obj\Debug\BoopRentalShop.exe
+C:\SRC\TrainningWinform\BoopRentalShop\obj\Debug\BoopRentalShop.pdb

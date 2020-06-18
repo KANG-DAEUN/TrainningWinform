@@ -1,0 +1,10 @@
+C:\SRC\TrainningWinform\GraphicApp\bin\Debug\GraphicApp.exe.config
+C:\SRC\TrainningWinform\GraphicApp\bin\Debug\GraphicApp.exe
+C:\SRC\TrainningWinform\GraphicApp\bin\Debug\GraphicApp.pdb
+C:\SRC\TrainningWinform\GraphicApp\obj\Debug\GraphicApp.csprojAssemblyReference.cache
+C:\SRC\TrainningWinform\GraphicApp\obj\Debug\GraphicApp.Form1.resources
+C:\SRC\TrainningWinform\GraphicApp\obj\Debug\GraphicApp.Properties.Resources.resources
+C:\SRC\TrainningWinform\GraphicApp\obj\Debug\GraphicApp.csproj.GenerateResource.cache
+C:\SRC\TrainningWinform\GraphicApp\obj\Debug\GraphicApp.csproj.CoreCompileInputs.cache
+C:\SRC\TrainningWinform\GraphicApp\obj\Debug\GraphicApp.exe
+C:\SRC\TrainningWinform\GraphicApp\obj\Debug\GraphicApp.pdb

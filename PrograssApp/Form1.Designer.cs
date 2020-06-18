@@ -40,7 +40,6 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(529, 55);
             this.progressBar1.TabIndex = 0;
-            this.progressBar1.Value = 50000;
             // 
             // button1
             // 

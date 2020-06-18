@@ -1,0 +1,10 @@
+C:\SRC\TrainningWinform\Animation\bin\Debug\Animation.exe.config
+C:\SRC\TrainningWinform\Animation\bin\Debug\Animation.exe
+C:\SRC\TrainningWinform\Animation\bin\Debug\Animation.pdb
+C:\SRC\TrainningWinform\Animation\obj\Debug\AnimationApp.csprojAssemblyReference.cache
+C:\SRC\TrainningWinform\Animation\obj\Debug\Animation.Form1.resources
+C:\SRC\TrainningWinform\Animation\obj\Debug\Animation.Properties.Resources.resources
+C:\SRC\TrainningWinform\Animation\obj\Debug\AnimationApp.csproj.GenerateResource.cache
+C:\SRC\TrainningWinform\Animation\obj\Debug\AnimationApp.csproj.CoreCompileInputs.cache
+C:\SRC\TrainningWinform\Animation\obj\Debug\Animation.exe
+C:\SRC\TrainningWinform\Animation\obj\Debug\Animation.pdb
