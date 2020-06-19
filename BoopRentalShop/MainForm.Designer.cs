@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.메인관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.구분코드관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.사용자관리UToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,18 +49,25 @@
             // 메인관리ToolStripMenuItem
             // 
             this.메인관리ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.구분코드관리ToolStripMenuItem});
+            this.구분코드관리ToolStripMenuItem,
+            this.사용자관리UToolStripMenuItem});
             this.메인관리ToolStripMenuItem.Name = "메인관리ToolStripMenuItem";
             this.메인관리ToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
-            this.메인관리ToolStripMenuItem.Text = "메인관리(M)";
-            this.메인관리ToolStripMenuItem.Click += new System.EventHandler(this.메인관리ToolStripMenuItem_Click);
+            this.메인관리ToolStripMenuItem.Text = "메인관리(&M)";
             // 
             // 구분코드관리ToolStripMenuItem
             // 
             this.구분코드관리ToolStripMenuItem.Name = "구분코드관리ToolStripMenuItem";
-            this.구분코드관리ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.구분코드관리ToolStripMenuItem.Text = "구분코드 관리";
+            this.구분코드관리ToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
+            this.구분코드관리ToolStripMenuItem.Text = "구분코드 관리(&D)";
             this.구분코드관리ToolStripMenuItem.Click += new System.EventHandler(this.구분코드관리ToolStripMenuItem_Click);
+            // 
+            // 사용자관리UToolStripMenuItem
+            // 
+            this.사용자관리UToolStripMenuItem.Name = "사용자관리UToolStripMenuItem";
+            this.사용자관리UToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
+            this.사용자관리UToolStripMenuItem.Text = "사용자 관리(&U)";
+            this.사용자관리UToolStripMenuItem.Click += new System.EventHandler(this.사용자관리UToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -73,6 +81,7 @@
             this.Text = "Book Rental Shop ver 1.0";
             this.TransparencyKey = System.Drawing.Color.Empty;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -86,6 +95,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 메인관리ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 구분코드관리ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 사용자관리UToolStripMenuItem;
     }
 }
 

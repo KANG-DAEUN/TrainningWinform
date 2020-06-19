@@ -14,3 +14,4 @@ C:\SRC\TrainningWinform\BoopRentalShop\obj\Debug\BoopRentalShop.csproj.CopyCompl
 C:\SRC\TrainningWinform\BoopRentalShop\obj\Debug\BoopRentalShop.exe
 C:\SRC\TrainningWinform\BoopRentalShop\obj\Debug\BoopRentalShop.pdb
 C:\SRC\TrainningWinform\BoopRentalShop\obj\Debug\BoopRentalShop.DivForm.resources
+C:\SRC\TrainningWinform\BoopRentalShop\obj\Debug\BoopRentalShop.UserForm.resources

@@ -13,12 +13,12 @@ using MetroFramework.Forms;
 
 namespace BoopRentalShop
 {
-    public partial class DivForm : MetroForm
+    public partial class UserForm : MetroForm
     {
 
         string strConString = "Data Source=192.168.0.18;Initial Catalog=BookRentalshopDB;Persist Security Info=True;User ID=sa;Password=p@ssw0rd!";
         string mode = "";
-        public DivForm()
+        public UserForm()
         {
             InitializeComponent();
         }
@@ -27,33 +27,60 @@ namespace BoopRentalShop
         {
             UpdateData(); // 데이터 그리드 DB 데이터 로딩하기
         }
-
+        /// <summary>
+        /// 사용자 데이터 가져오기
+        /// </summary>
         private void UpdateData()
         {
             //throw new NotImplementedException();
             using (SqlConnection conn = new SqlConnection(strConString))
             {
                 conn.Open(); // DB 열기
-                string strQuery = "SELECT Division, Names FROM dbo.divtbl";
+                string strQuery = "SELECT id,userID,password,lastLoginDt,loginIpAddr "
+                     + " FROM dbo.userTbl";
                 SqlCommand cmd = new SqlCommand(strQuery, conn);
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(strQuery, conn); // 데이터를 가져오는 플러그
                 DataSet ds = new DataSet(); //데이터를 담는 집합
-                dataAdapter.Fill(ds, "divtbl"); // divtbl로 채워넣기
+                dataAdapter.Fill(ds, "userTbl"); // userTbl 채워넣기
 
-                GrdDivTbl.DataSource = ds; //붓기
-                GrdDivTbl.DataMember = "divtbl"; //
+                GrdUserTbl.DataSource = ds; //붓기
+                GrdUserTbl.DataMember = "userTbl"; 
+
             }
-        }
+            DataGridViewColumn column = GrdUserTbl.Columns[0]; //id컬럼
+            column.Width = 40;
+            column.HeaderText = "순번";
+            column = GrdUserTbl.Columns[1]; // userID 컬럼
+            column.Width = 80;
+            column.HeaderText = "아이디";
+            column = GrdUserTbl.Columns[2]; // password 컬럼
+            column.Width = 100;
+            column.HeaderText = "패스워드";
+            column = GrdUserTbl.Columns[3]; //최종접속시간
+            column.Width = 120;
+            column.HeaderText = "최종접속시간";
+            column = GrdUserTbl.Columns[4]; // 접속아이피주소
+            column.Width = 150;
+            column.HeaderText = "접속아이피주소";
 
+
+        }
+        /// <summary>
+        /// 그리드 셀 클릭 이벤트
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GrdDivTbl_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex > -1)
             {
-                DataGridViewRow data = GrdDivTbl.Rows[e.RowIndex];
-                TxtDivision.Text = data.Cells[0].Value.ToString();
-                TxtNames.Text = data.Cells[1].Value.ToString();
-                TxtDivision.ReadOnly = true;
-                TxtDivision.BackColor = Color.Beige;
+                DataGridViewRow data = GrdUserTbl.Rows[e.RowIndex];
+                TxtId.Text = data.Cells[0].Value.ToString();
+                TxtUserid.Text = data.Cells[1].Value.ToString();
+                TxtPassword.Text = data.Cells[2].Value.ToString();
+
+                TxtUserid.ReadOnly = true;
+                TxtUserid.BackColor = Color.Beige;
 
                 mode = "UPDATE";
 
@@ -69,7 +96,7 @@ namespace BoopRentalShop
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(TxtDivision.Text) || string.IsNullOrEmpty(TxtNames.Text))
+            if (string.IsNullOrEmpty(TxtUserid.Text) || string.IsNullOrEmpty(TxtPassword.Text))
             {
                 MetroMessageBox.Show(this, "빈값은 저장할 수 없습니다.", "경고",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -84,10 +111,9 @@ namespace BoopRentalShop
 
         private void CleartextControls()
         {
-            TxtDivision.Text = TxtNames.Text = "";
-            TxtDivision.ReadOnly = false;
-            TxtDivision.BackColor = Color.White;
-            TxtDivision.Focus();
+            TxtId.Text = TxtUserid.Text = TxtPassword.Text = "";
+
+            TxtUserid.Focus();
         }
 
         private void SaveProcess()
@@ -105,25 +131,34 @@ namespace BoopRentalShop
                 string strQuery = "";
                 if (mode == "UPDATE")
                 {
-                    strQuery = "UPDATE dbo.divtbl " +
-                    "   SET Names = @Names " +
-                     " WHERE Division = @Division ";
+                    strQuery = "UPDATE dbo.userTbl " +
+                                  " SET userID = @UserID " +
+                                      " , password = @password " +
+                                "  WHERE Id = @Id ";
                 }
                 else if (mode == "INSERT")
                 {
-                    strQuery = "INSERT INTO dbo.divtbl (Division ,Names) " 
-                        +" VALUES (@Division, @Names) ";
+                    strQuery = "INSERT INTO dbo.userTbl " +
+                                 "  (userID, password) " +
+                                 " VALUES (@UserID, @Password) ";
                 }
 
                 cmd.CommandText = strQuery;
 
-                SqlParameter parmNames = new SqlParameter("@Names", SqlDbType.NVarChar, 45);
-                parmNames.Value = TxtNames.Text;
-                cmd.Parameters.Add(parmNames);
+                SqlParameter parmUserID = new SqlParameter("@UserID", SqlDbType.VarChar, 12);
+                parmUserID.Value = TxtUserid.Text;
+                cmd.Parameters.Add(parmUserID);
 
-                SqlParameter parmDivision = new SqlParameter("@Division", SqlDbType.Char, 4);
-                parmDivision.Value = TxtDivision.Text;
-                cmd.Parameters.Add(parmDivision);
+                SqlParameter parmPassword = new SqlParameter("@password", SqlDbType.VarChar, 20);
+                parmPassword.Value = TxtPassword.Text;
+                cmd.Parameters.Add(parmPassword);
+
+                if (mode == "UPDATE")
+                {
+                    SqlParameter parmId = new SqlParameter("@Id", SqlDbType.Int);
+                    parmId.Value = TxtId.Text;
+                    cmd.Parameters.Add(parmId);
+                }
 
                 cmd.ExecuteNonQuery();
             }
@@ -139,7 +174,7 @@ namespace BoopRentalShop
         
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(TxtDivision.Text) || string.IsNullOrEmpty(TxtNames.Text))
+            if (string.IsNullOrEmpty(TxtUserid.Text) || string.IsNullOrEmpty(TxtPassword.Text))
             {
                 MetroMessageBox.Show(this, "빈값은 삭제할 수 없습니다.", "경고",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -161,11 +196,16 @@ namespace BoopRentalShop
                 cmd.CommandText = "DELETE FROM dbo.divtbl "
                                     + " WHERE Division = @Division ";
                 SqlParameter paraDivision = new SqlParameter("@Division", SqlDbType.Char, 4);
-                paraDivision.Value = TxtDivision.Text;
+                paraDivision.Value = TxtUserid.Text;
                 cmd.Parameters.Add(paraDivision);
 
                 cmd.ExecuteNonQuery();
             }
+        }
+
+        private void TxtUserid_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
