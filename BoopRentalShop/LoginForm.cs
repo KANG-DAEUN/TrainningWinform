@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Forms;
+
 namespace BoopRentalShop
 {
     public partial class LoginForm : MetroForm
@@ -53,41 +54,69 @@ namespace BoopRentalShop
         private void LoginProcess()
         {
             //throw new NotImplementedException();
-            if((string.IsNullOrEmpty(TxtUserID.Text)) ||
-                (string.IsNullOrEmpty(TxtPassword.Text)))
+            if (string.IsNullOrEmpty(TxtUserID.Text) || string.IsNullOrEmpty(TxtPassword.Text))         //null이거나 값이 비어있을 때
             {
                 MetroMessageBox.Show(this, "아이디/패스워드를 입력하세요!", "오류",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);                      //ID,Password창이 비어있을 때 오류가 뜬다고 알려줘야함
                 return;
-            }
-            
-            string strUserId = string.Empty;
 
-            using (SqlConnection conn = new SqlConnection(strConString))
+            }
+            //로그인 창, 비밀번호 창의 값이 비어있으면 안된다.
+
+            string strUserid = string.Empty;
+
+            try                                                                                 // try ~ catch구문 (Error 핸들링)
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandText = "SELECT userID FROM userTbl "+
-                                  " WHERE userID = @userID " +
-                                  " AND password = @password";
-                SqlParameter parmUserId = new SqlParameter("@userID", SqlDbType.VarChar, 12);
-                parmUserId.Value = TxtUserID.Text;
-                cmd.Parameters.Add(parmUserId);
+                using (SqlConnection conn = new SqlConnection(strConString))               //Sql 연결하는 것
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = conn;
+                    cmd.CommandText = "select userID from usertbl " +
+                        " where userid = @userID " +
+                        " and password = @Password";
+                    SqlParameter parmUserID = new SqlParameter("@userID", SqlDbType.VarChar, 12);               //DB의 type과 int size를 넣어야함
+                    parmUserID.Value = TxtUserID.Text;
+                    cmd.Parameters.Add(parmUserID);
+                    //ID
+                    SqlParameter parmPassword = new SqlParameter("@Password", SqlDbType.VarChar, 20);
+                    parmPassword.Value = TxtPassword.Text;
+                    cmd.Parameters.Add(parmPassword);
+                    //Password
 
-                SqlParameter parmpassword = new SqlParameter("@password", SqlDbType.VarChar, 20);
-                parmpassword.Value = TxtPassword.Text;
-                cmd.Parameters.Add(parmpassword);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    reader.Read();
+                    strUserid = reader["userID"] != null ? reader["userID"].ToString() : "";               //아이디값이 없을 때
 
-                SqlDataReader reader = cmd.ExecuteReader();
-                reader.Read();
-                strUserId = reader["userID"].ToString();
-                MetroMessageBox.Show(this, "접속성공", "로그인");
-                Debug.WriteLine("On the Debug");
 
+                    if (strUserid != "")
+                    {
+                        MetroMessageBox.Show(this, "접속성공", "로그인성공");
+                        this.Close();                                           //Loginform창이 닫힘
+                    }
+                    else
+                    {
+                        MetroMessageBox.Show(this, "접속실패", "로그인실패",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    }
+
+
+                    //Debug.WriteLine("On the Debug");
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MetroMessageBox.Show(this, $"Error : {ex.StackTrace}", "오류",            // StackTrace : 오류난 곳의 코드 주소를 보여줌 (개발자가 봄)
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
 
 
             }
+
         }
     }
 }
